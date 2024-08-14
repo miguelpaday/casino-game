@@ -36,7 +36,15 @@ export class Preloader extends Scene {
         this.load.image('button-normal', 'buttons/reg-digit-background.png');
         this.load.image('button-pressed', 'buttons/reg-digit-background2.png');
         this.load.image('slotreel', 'slot/reg-slot-reel.png');
+
         this.load.spritesheet('slotmachine', 'slot/slot-machine-sprite.png', { frameWidth: 320, frameHeight: 175 });
+
+        this.load.audio('reg-bgm', 'audio/background.wav');
+        this.load.audio('reg-button', 'audio/alpha-num.mp3');
+        this.load.audio('reg-rolling', 'audio/slot-machine-roll.wav');
+        this.load.audio('reg-lever', 'audio/slot-lever.wav');
+        this.load.audio('reg-winning', 'audio/winning.wav');
+        this.load.audio('reg-slot-stop', 'audio/slot-stop.wav');
     }
 
     create() {

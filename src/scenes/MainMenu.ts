@@ -19,7 +19,7 @@ export class MainMenu extends Scene {
 
         this.logo = this.add.image(
             Dimensions.getWidth() / 2,
-            Misc.flexPosition({ row: 5, position: 1, direction: 'vertical' }),
+            Misc.flexPosition({ slices: 5, position: 1, direction: 'vertical' }),
             'logo',
         );
 
@@ -27,7 +27,7 @@ export class MainMenu extends Scene {
 
         this.title = this.add.text(
             Dimensions.getWidth() / 2,
-            Misc.flexPosition({ row: 5, position: 1, direction: 'vertical' }),
+            Misc.flexPosition({ slices: 5, position: 1, direction: 'vertical' }),
             'Main Menu', {
             fontFamily: 'Arial Black', fontSize: 38, color: '#ffffff',
             stroke: '#000000', strokeThickness: 8,

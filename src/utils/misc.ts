@@ -1,3 +1,4 @@
+import { Scene } from "phaser";
 
 
 export class PaddingHelper {
@@ -7,14 +8,15 @@ export class PaddingHelper {
 }
 
 export class Misc {
-    static flexPosition({ row, position, direction }: { row: number, position: number, direction: 'horizontal' | 'vertical' }) {
+    static flexPosition({ slices, position, direction }: { slices: number, position: number, direction: 'horizontal' | 'vertical' }) {
         if (direction === 'horizontal') {
-            return (Dimensions.getWidth() / row) / 2 + (Dimensions.getWidth() / row) * (position - 1);
+            return (Dimensions.getWidth() / slices) / 2 + (Dimensions.getWidth() / slices) * (position - 1);
         }
 
-        return (Dimensions.getHeight() / row) / 2 + (Dimensions.getHeight() / row) * (position - 1);
+        return (Dimensions.getHeight() / slices) / 2 + (Dimensions.getHeight() / slices) * (position - 1);
     }
 }
+
 
 export class Dimensions {
     static instance: Dimensions; // Add static property 'instance'
