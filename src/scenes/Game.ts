@@ -48,9 +48,6 @@ export class Game extends Scene {
                 props: {
                     tilePositionY: { value: (this.cardHeight * position) - 60, duration: 400 }
                 },
-                onComplete: () => {
-                    this.reelIndex = (this.reelIndex + 1) % this.reels.length;
-                },
                 ease: Math.Easing.Expo.InOut
             })
         } else {
@@ -59,13 +56,11 @@ export class Game extends Scene {
                 props: {
                     tilePositionY: { value: this.reels[this.reelIndex].tilePositionY + 60, duration: 100 }
                 },
-                onComplete: () => {
-                    this.reelIndex = (this.reelIndex + 1) % this.reels.length;
-                },
                 yoyo: true,
                 ease: Math.Easing.Expo.InOut
             })
         }
+        this.reelIndex = (this.reelIndex + 1) % this.reels.length;
     }
 
     placeNumberButtons() {
